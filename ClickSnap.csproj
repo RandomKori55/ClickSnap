@@ -6,7 +6,12 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <RootNamespace>ClickSnap</RootNamespace>
     <AssemblyName>ClickSnap</AssemblyName>
+    <ApplicationIcon>Assets/app.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.3.20" />

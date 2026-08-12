@@ -3,7 +3,8 @@
         x:Class="ClickSnap.MainWindow"
         Title="ClickSnap"
         Width="520"
-        Height="340">
+        Height="340"
+        Icon="/Assets/app.ico">
 
     <StackPanel Margin="16" Spacing="10">
         <TextBlock Text="ClickSnap"
