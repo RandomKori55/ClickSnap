@@ -1,0 +1,46 @@
+name: clicksnap
+version: '1.0.0'
+summary: ClickSnap - скриншоты и запись экрана
+description: |
+  Приложение для создания скриншотов и записи экрана с удобным интерфейсом.
+
+  Возможности:
+  - Создание скриншотов области экрана
+  - Запись видео экрана
+  - Простой и интуитивный интерфейс
+
+base: core24
+confinement: strict
+grade: stable
+
+apps:
+  clicksnap:
+    command: bin/clicksnap
+    extensions: [gnome]
+    plugs:
+      - home
+      - x11
+      - pulseaudio
+      - camera
+      - audio-record
+      - screen-inhibit-control
+
+parts:
+  my-app:
+    plugin: dotnet
+    source: .
+    dotnet-build-configuration: Release
+    build-snaps:
+      - dotnet-sdk/10.0/stable
+    stage-packages:
+      - libicu74
+    prime:
+      - lib/ClickSnap
+
+  launcher:
+    plugin: dump
+    source: snap/local
+    organize:
+      clicksnap: bin/clicksnap
+    prime:
+      - bin/clicksnap
