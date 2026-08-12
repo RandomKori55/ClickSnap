@@ -1,20 +1,4 @@
 ```
-# Build artifacts
-*.exe
-*.dll
-*.pdb
-*.nupkg
-bin/
-obj/
-# Dependencies
-packages/
-# Logs and temp files
-*.log
-*.tmp
-# Environment
-.env
-.env.local
-.env.*
-# Editors
-.vs/
+# Snap packaging
+snap/
 ```
