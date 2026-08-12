@@ -1,0 +1,53 @@
+# ===== Результаты сборки =====
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Bb]uild/
+bld/
+publish/
+msbuild.log
+msbuild.err
+msbuild.warn
+
+# ===== NuGet =====
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ===== Тесты / покрытие =====
+TestResults/
+*.coverage
+*.coveragexml
+coverage/
+cover_out/
+
+# ===== Логи и временные файлы =====
+*.log
+logs/
+*.tmp
+*.bak
+*.cache
+
+# ===== Пользовательские настройки и IDE =====
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+*.iml
+.vs/
+.idea/
+.vscode/
+
+# ===== Системный мусор =====
+Thumbs.db
+Desktop.ini
+.DS_Store
+*~
+
+# ===== Специфичное для проекта =====
+# Локальные настройки приложения (если лежат рядом с exe)
+settings.txt

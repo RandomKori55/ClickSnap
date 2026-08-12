@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <RootNamespace>ClickSnap</RootNamespace>
+    <AssemblyName>ClickSnap</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.20" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.20" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.20" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.20" />
+
+    <!-- Только для Debug-сборки -->
+    <PackageReference
+      Condition="'$(Configuration)' == 'Debug'"
+      Include="Avalonia.Diagnostics"
+      Version="11.3.20" />
+  </ItemGroup>
+</Project>
