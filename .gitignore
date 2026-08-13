@@ -2,6 +2,7 @@
 # Snap packaging
 snap/local/
 bin/
+obj/
 
 # Compressed files
 *.zip
