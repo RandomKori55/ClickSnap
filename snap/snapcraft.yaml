@@ -25,6 +25,7 @@ apps:
       - audio-record
       - screen-inhibit-control
       - pointer
+      - raw-input
 
 parts:
   my-app:
