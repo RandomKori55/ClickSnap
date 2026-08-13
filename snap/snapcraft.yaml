@@ -15,7 +15,7 @@ grade: stable
 
 apps:
   clicksnap:
-    command: bin/clicksnap
+    command: ClickSnap/ClickSnap
     extensions: [gnome]
     plugs:
       - home
@@ -24,23 +24,18 @@ apps:
       - camera
       - audio-record
       - screen-inhibit-control
+      - screenshot
+      - raw-input
 
 parts:
   my-app:
     plugin: dotnet
     source: .
-    dotnet-build-configuration: Release
     build-snaps:
       - dotnet-sdk/10.0/stable
     stage-packages:
       - libicu74
     prime:
       - lib/ClickSnap
-
-  launcher:
-    plugin: dump
-    source: snap/local
-    organize:
-      clicksnap: bin/clicksnap
-    prime:
-      - bin/clicksnap
+    override-build: |
+      craftctl default build --configuration Release
