@@ -24,6 +24,7 @@ apps:
       - camera
       - audio-record
       - screen-inhibit-control
+      - pointer
 
 parts:
   my-app:
