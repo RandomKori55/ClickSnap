@@ -15,7 +15,7 @@ grade: stable
 
 apps:
   clicksnap:
-    command: bin/clicksnap
+    command: ClickSnap/ClickSnap
     extensions: [gnome]
     plugs:
       - home
@@ -24,7 +24,7 @@ apps:
       - camera
       - audio-record
       - screen-inhibit-control
-      - pointer
+      - screenshot
       - raw-input
 
 parts:
@@ -38,11 +38,3 @@ parts:
       - libicu74
     prime:
       - lib/ClickSnap
-
-  launcher:
-    plugin: dump
-    source: snap/local
-    organize:
-      clicksnap: bin/clicksnap
-    prime:
-      - bin/clicksnap
