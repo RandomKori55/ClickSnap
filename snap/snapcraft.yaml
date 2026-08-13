@@ -31,10 +31,11 @@ parts:
   my-app:
     plugin: dotnet
     source: .
-    dotnet-build-parameters: ["--configuration", "Release"]
     build-snaps:
       - dotnet-sdk/10.0/stable
     stage-packages:
       - libicu74
     prime:
       - lib/ClickSnap
+    override-build: |
+      craftctl default build --configuration Release
