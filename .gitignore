@@ -1,6 +1,7 @@
 ```
 # Snap packaging
 snap/local/
+bin/
 
 # Compressed files
 *.zip
